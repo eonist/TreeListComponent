@@ -10,6 +10,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         StyleManager.addStyle("Window{fill:white;corner-radius:4px;}")
         //continue here
         win = AppWin(300,400)
+        let app:NSApplication = aNotification.object as! NSApplication/*grab the app instance from the notification*/
+        app.windows[0].close()/*close the initial non-optional default window*/
+        
     }
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
