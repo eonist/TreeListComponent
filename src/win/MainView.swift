@@ -6,9 +6,9 @@ class MainView:CustomView {
         super.resolveSkin()
         StyleManager.addStyle("Section#sectionContainer{fill:orange;float:left;clear:left;}")
         container = addSubView(Section(width,height,self,"sectionContainer"))
-        //createTreeList()
+        createTreeList()
         
-        StyleManager.addStyle("Slider [Button,Thumb] ")
+        //StyleManager.addStyle("Slider [Button,Thumb] Element{fill-alpha:1;}")//testing grouping
         
     }
     /**
