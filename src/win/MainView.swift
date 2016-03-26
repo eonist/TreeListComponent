@@ -13,7 +13,7 @@ class MainView:CustomView {
      */
     func createTreeList(){
         //create the tree list here
-        
+        var xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
     }
     override func createTitleBar() {
         StyleManager.addStylesByURL("~/Desktop/css/titleBar.css")
