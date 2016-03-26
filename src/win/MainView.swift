@@ -8,7 +8,7 @@ class MainView:CustomView {
         container = addSubView(Section(width,height,self,"sectionContainer"))
         //createTreeList()
         
-        
+        StyleManager.addStyle("Slider [Button,Thumb] ")
         
     }
     /**
