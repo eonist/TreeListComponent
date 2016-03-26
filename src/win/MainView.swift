@@ -16,7 +16,7 @@ class MainView:CustomView {
     }
     override func createTitleBar() {
         StyleManager.addStylesByURL("~/Desktop/css/titleBar.css")
-        StyleManager.addStyle("Section#titleBar{padding-left:12px;}")//padding-top:16px;
+        StyleManager.addStyle("Section#titleBar{padding-top:16px;padding-bottom:8px;padding-left:12px;}")
         super.createTitleBar()
     }
 }
