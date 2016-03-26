@@ -6,7 +6,10 @@ class MainView:CustomView {
         super.resolveSkin()
         StyleManager.addStyle("Section#sectionContainer{fill:orange;float:left;clear:left;}")
         container = addSubView(Section(width,height,self,"sectionContainer"))
-        createTreeList()
+        //createTreeList()
+        
+        
+        
     }
     /**
      *
