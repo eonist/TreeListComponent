@@ -12,7 +12,6 @@ class MainView:CustomView {
      *
      */
     func createTreeList(){
-
         StyleManager.addStylesByURL("~/Desktop/css/explorer/generic.css")
         StyleManager.addStylesByURL("~/Desktop/css/explorer/advance/treelist/treelist.css")
         //create the tree list here
