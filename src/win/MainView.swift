@@ -1,11 +1,11 @@
 import Foundation
 
 class MainView:CustomView {
-    var container:Container?
+    var container:Section?
     override func resolveSkin() {
         super.resolveSkin()
-        StyleManager.addStyle("Container#listContainer{fill:orange;float:left;clear:left;}")
-        container = addSubView(Container(width,height,self,"listContainer"))
+        StyleManager.addStyle("Section#sectionContainer{fill:orange;float:left;clear:left;}")
+        container = addSubView(Section(width,height,self,"sectionContainer"))
         createTreeList()
     }
     /**
@@ -16,7 +16,7 @@ class MainView:CustomView {
     }
     override func createTitleBar() {
         StyleManager.addStylesByURL("~/Desktop/css/titleBar.css")
-        StyleManager.addStyle("Section#titleBar{padding-top:16px;padding-left:12px;}")
+        StyleManager.addStyle("Section#titleBar{padding-left:12px;}")//padding-top:16px;
         super.createTitleBar()
     }
 }
