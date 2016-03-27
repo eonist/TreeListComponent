@@ -19,7 +19,7 @@ class MainView:CustomView {
         //create the tree list here
         
         let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
-        let treeList:TreeList = container!.addSubView(TreeList(NaN, NaN, NaN, Node(xml),container))
+        let treeList:TreeList = container!.addSubView(TreeList(192, 140, 24, Node(xml),container))
         treeList
         
         //Swift.print("selectedIndex: " + TreeListParser.selectedIndex(treeList));
