@@ -19,10 +19,9 @@ class MainView:CustomView {
         //create the tree list here
         
         let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
-        
-        /*let treeList:TreeList = container!.addSubView(TreeList(NaN, NaN, NaN, Node(xml),container))
+        let treeList:TreeList = container!.addSubView(TreeList(NaN, NaN, NaN, Node(xml),container))
         treeList
-        */
+        
         //Swift.print("selectedIndex: " + TreeListParser.selectedIndex(treeList));
         //Swift.print("selected: " + TreeListParser.selected(treeList));
         //Swift.print("selected Title: "+DatabaseParser.attributesAt(treeList.database, TreeListParser.selectedIndex(treeList))["title"]);
