@@ -9,7 +9,6 @@ class MainView:CustomView {
         createTreeList()
         
         //StyleManager.addStyle("Slider [Button,Thumb] Element{fill-alpha:1;}")//testing grouping
-        
     }
     /**
      *
