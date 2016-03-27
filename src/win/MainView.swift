@@ -15,8 +15,7 @@ class MainView:CustomView {
      *
      */
     func createTreeList(){
-        StyleManager.addStylesByURL("~/Desktop/css/explorer/generic.css")
-        StyleManager.addStylesByURL("~/Desktop/css/explorer/advance/treelist/treelist.css")
+        StyleManager.addStylesByURL("~/Desktop/css/treelistdemo.css")
         //create the tree list here
         
         let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
