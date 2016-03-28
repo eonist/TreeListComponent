@@ -43,15 +43,22 @@ class MainView:CustomView {
         let selectedIndex:Array = TreeListParser.selectedIndex(treeList)
         Swift.print("selectedIndex: " + "\(selectedIndex)")
         //			trace("_scrollTreeList.database.xml.toXMLString(): " + _scrollTreeList.database.xml.toXMLString());
-        let selectedXML:NSXMLElement = TreeListParser.itemAt(treeList.node, selectedIndex)
+        let selectedXML:NSXMLElement = XMLParser.childAt(treeList.node.xml, selectedIndex)!
         //			trace("selectedXML: " + selectedXML);
         Swift.print("selectedXML.toXMLString(): \n")
         Swift.print(selectedXML)
         
-        treeList
+        //treeList
+        
+        
         
         //TODO: try the move up and move down calls
     }
+    override func onEvent(event: Event) {
+        if(event.type == SelectEvent.select && event.immediate === treeList){onTreeListSelect}
+        super.onEvent(event)
+    }
+    
     override func createTitleBar() {
         StyleManager.addStylesByURL("~/Desktop/css/titleBar.css")
         StyleManager.addStyle("Section#titleBar{padding-top:16px;padding-bottom:8px;padding-left:12px;}")
