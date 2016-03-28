@@ -20,19 +20,19 @@ class MainView:CustomView {
         let treeList:TreeList = container!.addSubView(TreeList(140, 288, 24, Node(xml), container))
         
 
-        //Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
-        //Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")//Output:  [2,2,0]
-        //Swift.print("selected Title: " + "\(XMLParser.attributesAt(treeList.node.xml, TreeListParser.selectedIndex(treeList))!["title"])")//Output: Oregano
+        Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
+        Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")//Output:  [2,2,0]
+        Swift.print("selected Title: " + "\(XMLParser.attributesAt(treeList.node.xml, TreeListParser.selectedIndex(treeList))!["title"])")//Output: Oregano
         TreeListModifier.unSelectAll(treeList)
         
-        //TreeListModifier.selectAt(treeList, [2])
-        //TreeListModifier.collapseAt(treeList, [])//closes the treeList
-        /*TreeListModifier.explodeAt(treeList,[])//opens the treeList
+        TreeListModifier.selectAt(treeList, [2])
+        TreeListModifier.collapseAt(treeList, [])//closes the treeList
+        TreeListModifier.explodeAt(treeList,[])//opens the treeList
         
 
         treeList.node.removeAt([1])
         treeList.node.addAt([1],  NSXMLElement("<item title=\"Fish\"/>"))/*new*/
-        */
+        /**/
         
         Swift.print("\(treeList.node.xml)")
         
