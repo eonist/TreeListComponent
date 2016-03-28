@@ -17,7 +17,7 @@ class MainView:CustomView {
         StyleManager.addStylesByURL("~/Desktop/css/treelistdemo.css")
         
         let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
-        let treeList:TreeList = container!.addSubView(TreeList(140, 288, 24, Node(xml),container))
+        let treeList:TreeList = container!.addSubView(TreeList(140, 288, 24, Node(xml), container))
         
 
         //Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
