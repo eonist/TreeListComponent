@@ -34,7 +34,7 @@ class MainView:CustomView {
         treeList.node.addAt([1],  NSXMLElement("<item title=\"Fish\"/>"))/*new*/
         
         
-        Swift.print("treeList.node.xml: " + "\(treeList.node.xml)")
+        Swift.print("\(treeList.node.xml)")
         
         
         //Continue here: removing from the node should be the prefered way of removing items. Might solve the collapse bug in herbs
