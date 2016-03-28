@@ -39,8 +39,6 @@ class MainView:CustomView {
         
         //Swift.print("\(treeList.node.xml)")
         
-        
-        
         //treeList
         
         func onTreeListEvent(event: Event) {//add local event handler
@@ -52,7 +50,7 @@ class MainView:CustomView {
                 let selectedXML:NSXMLElement = XMLParser.childAt(treeList.node.xml, selectedIndex)!
                 //print("selectedXML: " + selectedXML);
                 Swift.print("selectedXML.toXMLString():")
-                Swift.print(selectedXML)//EXAMPLE output:<item title="Ginger"></item>
+                Swift.print(selectedXML)//EXAMPLE output: <item title="Ginger"></item>
             }
         }
         treeList.event = onTreeListEvent//add loval event listener
