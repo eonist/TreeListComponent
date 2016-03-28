@@ -50,24 +50,17 @@ class MainView:CustomView {
         
         //treeList
         
-        func onTreeListEvent(event: Event) {
-            Swift.print("onEvent")
-            Swift.print("event.immediate: " + "\(event.immediate)")
-            if(event.type == SelectEvent.select && event.immediate === treeList){onTreeListSelect(event as! SelectEvent)}
-            super.onEvent(event)
+        func onTreeListEvent(event: Event) {//add local event handler
+            if(event.type == SelectEvent.select && event.immediate === treeList){
+                Swift.print("onTreeListSelect()")
+                
+            }
         }
-
-        treeList.event = onTreeListEvent
+        treeList.event = onTreeListEvent//add loval event listener
         
 
         //TODO: try the move up and move down calls
-        
-        
     }
-    func onTreeListSelect(event:SelectEvent) {
-        Swift.print("onTreeListSelect()")
-    }
-    
     override func createTitleBar() {
         StyleManager.addStylesByURL("~/Desktop/css/titleBar.css")
         StyleManager.addStyle("Section#titleBar{padding-top:16px;padding-bottom:8px;padding-left:12px;}")
