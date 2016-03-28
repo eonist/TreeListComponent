@@ -38,6 +38,8 @@ class MainView:CustomView {
         
         
         //continue here: Test if the output xml looks good, and keeps all the selected, closed etc. and contextual attributes.
+        
+        //try the move up and move down calls
     }
     override func createTitleBar() {
         StyleManager.addStylesByURL("~/Desktop/css/titleBar.css")
