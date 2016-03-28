@@ -21,9 +21,9 @@ class MainView:CustomView {
         let treeList:TreeList = container!.addSubView(TreeList(140, 288, 24, Node(xml),container))
         treeList
         
-        //Swift.print("selectedIndex: " + TreeListParser.selectedIndex(treeList));
-        //Swift.print("selected: " + TreeListParser.selected(treeList));
-        //Swift.print("selected Title: "+DatabaseParser.attributesAt(treeList.database, TreeListParser.selectedIndex(treeList))["title"]);
+        Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")
+        Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
+        Swift.print("selected Title: " + DatabaseParser.attributesAt(treeList.database, TreeListParser.selectedIndex(treeList))["title"]);
         //TreeListModifier.collapseAt(treeList, []);
         //TreeListModifier.setSelectedAt(treeList, [1]);
         //TreeListModifier.unSelectAll(treeList);
