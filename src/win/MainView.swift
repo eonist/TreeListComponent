@@ -49,13 +49,14 @@ class MainView:CustomView {
         Swift.print(selectedXML)
         
         //treeList
-        
-        
-        
+
         //TODO: try the move up and move down calls
     }
+    func onTreeListSelect(event:SelectEvent) {
+        Swift.print("onTreeListSelect()")
+    }
     override func onEvent(event: Event) {
-        if(event.type == SelectEvent.select && event.immediate === treeList){onTreeListSelect}
+        if(event.type == SelectEvent.select && event.immediate === treeList){onTreeListSelect(event as! SelectEvent)}
         super.onEvent(event)
     }
     
