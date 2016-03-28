@@ -20,7 +20,7 @@ class MainView:CustomView {
         StyleManager.addStylesByURL("~/Desktop/css/treelistdemo.css")
         
         let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
-         = container!.addSubView(TreeList(140, 288, 24, Node(xml), container))
+        treeList = container!.addSubView(TreeList(140, 288, 24, Node(xml), container))
         
 
         Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
@@ -40,14 +40,15 @@ class MainView:CustomView {
         Swift.print("\(treeList.node.xml)")
         
         
-        var selectedIndex:Array = TreeListParser.selectedIndex(_sliderTreeList);
-        print("selectedIndex: " + selectedIndex);
+        let selectedIndex:Array = TreeListParser.selectedIndex(treeList)
+        Swift.print("selectedIndex: " + "\(selectedIndex)")
         //			trace("_scrollTreeList.database.xml.toXMLString(): " + _scrollTreeList.database.xml.toXMLString());
-        var selectedXML:XML = DatabaseParser.itemAt(_sliderTreeList.database, selectedIndex);
+        let selectedXML:NSXMLElement = TreeListParser.itemAt(treeList.node, selectedIndex)
         //			trace("selectedXML: " + selectedXML);
-        print("selectedXML.toXMLString(): \n" + selectedXML.toXMLString());
+        Swift.print("selectedXML.toXMLString(): \n")
+        Swift.print(selectedXML)
         
-        
+        treeList
         
         //TODO: try the move up and move down calls
     }
