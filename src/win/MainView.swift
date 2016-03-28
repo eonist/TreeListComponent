@@ -56,6 +56,7 @@ class MainView:CustomView {
         Swift.print("onTreeListSelect()")
     }
     override func onEvent(event: Event) {
+        Swift.print("onEvent")
         if(event.type == SelectEvent.select && event.immediate === treeList){onTreeListSelect(event as! SelectEvent)}
         super.onEvent(event)
     }
