@@ -19,7 +19,7 @@ class MainView:CustomView {
         let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
         let treeList:TreeList = container!.addSubView(TreeList(140, 288, 24, Node(xml),container))
         treeList
-        /*
+        /**/
 
         Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
         Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")//Output:  [2,2,0]
@@ -30,10 +30,11 @@ class MainView:CustomView {
         TreeListModifier.explodeAt(treeList,[])//opens the treeList
         
         TreeListModifier.removeAt(treeList, [1])
+        treeList.node.removeAt([1])
         treeList.node.addAt([1],  NSXMLElement("<item title=\"Fish\"/>"))/*new*/
         
-        */
-        treeList.node.removeAt([1])
+
+        
         
         
         //Continue here: removing from the node should be the prefered way of removing items. Might solve the collapse bug in herbs
