@@ -49,16 +49,23 @@ class MainView:CustomView {
         Swift.print(selectedXML)
         
         //treeList
+        
+        func onTreeListEvent(event: Event) {
+            Swift.print("onEvent")
+            Swift.print("event.immediate: " + "\(event.immediate)")
+            if(event.type == SelectEvent.select && event.immediate === treeList){onTreeListSelect(event as! SelectEvent)}
+            super.onEvent(event)
+        }
+
+        treeList.event = onTreeListEvent
+        
 
         //TODO: try the move up and move down calls
+        
+        
     }
     func onTreeListSelect(event:SelectEvent) {
         Swift.print("onTreeListSelect()")
-    }
-    override func onEvent(event: Event) {
-        Swift.print("onEvent")
-        if(event.type == SelectEvent.select && event.immediate === treeList){onTreeListSelect(event as! SelectEvent)}
-        super.onEvent(event)
     }
     
     override func createTitleBar() {
