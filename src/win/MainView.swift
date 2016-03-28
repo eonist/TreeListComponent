@@ -37,23 +37,22 @@ class MainView:CustomView {
         treeList.node.addAt([1],  NSXMLElement("<item title=\"Fish\"/>"))/*new*/
         /**/
         
-        Swift.print("\(treeList.node.xml)")
+        //Swift.print("\(treeList.node.xml)")
         
         
-        let selectedIndex:Array = TreeListParser.selectedIndex(treeList)
-        Swift.print("selectedIndex: " + "\(selectedIndex)")
-        //			trace("_scrollTreeList.database.xml.toXMLString(): " + _scrollTreeList.database.xml.toXMLString());
-        let selectedXML:NSXMLElement = XMLParser.childAt(treeList.node.xml, selectedIndex)!
-        //			trace("selectedXML: " + selectedXML);
-        Swift.print("selectedXML.toXMLString(): \n")
-        Swift.print(selectedXML)
         
         //treeList
         
         func onTreeListEvent(event: Event) {//add local event handler
             if(event.type == SelectEvent.select && event.immediate === treeList){
-                Swift.print("onTreeListSelect()")
-                
+                //Swift.print("onTreeListSelect()")
+                let selectedIndex:Array = TreeListParser.selectedIndex(treeList)
+                Swift.print("selectedIndex: " + "\(selectedIndex)")
+                //print("_scrollTreeList.database.xml.toXMLString(): " + _scrollTreeList.database.xml.toXMLString());
+                let selectedXML:NSXMLElement = XMLParser.childAt(treeList.node.xml, selectedIndex)!
+                //print("selectedXML: " + selectedXML);
+                Swift.print("selectedXML.toXMLString():")
+                Swift.print(selectedXML)//EXAMPLE output:<item title="Ginger"></item>
             }
         }
         treeList.event = onTreeListEvent//add loval event listener
