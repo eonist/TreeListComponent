@@ -19,7 +19,7 @@ class MainView:CustomView {
         let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
         let treeList:TreeList = container!.addSubView(TreeList(140, 288, 24, Node(xml),container))
         treeList
-        /**/
+        /*
 
         Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
         Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")//Output:  [2,2,0]
@@ -32,7 +32,7 @@ class MainView:CustomView {
 
         treeList.node.removeAt([1])
         treeList.node.addAt([1],  NSXMLElement("<item title=\"Fish\"/>"))/*new*/
-        
+        */
         
         Swift.print("\(treeList.node.xml)")
         
