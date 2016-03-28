@@ -22,6 +22,7 @@ class MainView:CustomView {
         treeList
         
         Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")
+        /*
         Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
         Swift.print("selected Title: " + "\(XMLParser.attributesAt(treeList.node.xml, TreeListParser.selectedIndex(treeList))!["title"])")
         TreeListModifier.collapseAt(treeList, [])
@@ -30,6 +31,7 @@ class MainView:CustomView {
         TreeListModifier.explodeAt(treeList,[])
         TreeListModifier.removeAt(treeList, [1])
         treeList.node.addAt([1],  NSXMLElement("<item title=\"Fish\"/>"))/*new*/
+        */
     }
     override func createTitleBar() {
         StyleManager.addStylesByURL("~/Desktop/css/titleBar.css")
