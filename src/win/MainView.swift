@@ -24,6 +24,7 @@ class MainView:CustomView {
         //Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")//Output:  [2,2,0]
         //Swift.print("selected Title: " + "\(XMLParser.attributesAt(treeList.node.xml, TreeListParser.selectedIndex(treeList))!["title"])")//Output: Oregano
         TreeListModifier.unSelectAll(treeList)
+        
         //TreeListModifier.selectAt(treeList, [2])
         //TreeListModifier.collapseAt(treeList, [])//closes the treeList
         /*TreeListModifier.explodeAt(treeList,[])//opens the treeList
