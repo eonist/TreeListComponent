@@ -13,11 +13,14 @@ class MainView:CustomView {
     /**
      *
      */
+    
+    var treeList:TreeList!
+    
     func createTreeList(){
         StyleManager.addStylesByURL("~/Desktop/css/treelistdemo.css")
         
         let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
-        let treeList:TreeList = container!.addSubView(TreeList(140, 288, 24, Node(xml), container))
+         = container!.addSubView(TreeList(140, 288, 24, Node(xml), container))
         
 
         Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
@@ -37,9 +40,16 @@ class MainView:CustomView {
         Swift.print("\(treeList.node.xml)")
         
         
-        //continue here: Test if the output xml looks good, and keeps all the selected, closed etc. and contextual attributes.
+        var selectedIndex:Array = TreeListParser.selectedIndex(_sliderTreeList);
+        print("selectedIndex: " + selectedIndex);
+        //			trace("_scrollTreeList.database.xml.toXMLString(): " + _scrollTreeList.database.xml.toXMLString());
+        var selectedXML:XML = DatabaseParser.itemAt(_sliderTreeList.database, selectedIndex);
+        //			trace("selectedXML: " + selectedXML);
+        print("selectedXML.toXMLString(): \n" + selectedXML.toXMLString());
         
-        //try the move up and move down calls
+        
+        
+        //TODO: try the move up and move down calls
     }
     override func createTitleBar() {
         StyleManager.addStylesByURL("~/Desktop/css/titleBar.css")
