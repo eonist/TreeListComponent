@@ -22,14 +22,13 @@ class MainView:CustomView {
         
         Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")//Output:  [2,2,0]
         Swift.print("selected Title: " + "\(XMLParser.attributesAt(treeList.node.xml, TreeListParser.selectedIndex(treeList))!["title"])")//Output: Oregano
-        
-        TreeListModifier.collapseAt(treeList, [])
-        
+        TreeListModifier.unSelectAll(treeList)
+        TreeListModifier.selectAt(treeList, [1])
         /*
         Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
+        TreeListModifier.collapseAt(treeList, [])
         
-        TreeListModifier.setSelectedAt(treeList, [1])
-        TreeListModifier.unSelectAll(treeList)
+        
         TreeListModifier.explodeAt(treeList,[])
         TreeListModifier.removeAt(treeList, [1])
         treeList.node.addAt([1],  NSXMLElement("<item title=\"Fish\"/>"))/*new*/
