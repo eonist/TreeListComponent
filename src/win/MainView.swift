@@ -36,10 +36,8 @@ class MainView:CustomView {
         
         Swift.print("\(treeList.node.xml)")
         
-        
         //Continue here: removing from the node should be the prefered way of removing items. Might solve the collapse bug in herbs
         //continue here: Test if the output xml looks good, and keeps all the selected, closed etc. and contextual attributes.
-        
     }
     override func createTitleBar() {
         StyleManager.addStylesByURL("~/Desktop/css/titleBar.css")
