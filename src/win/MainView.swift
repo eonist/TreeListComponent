@@ -29,11 +29,11 @@ class MainView:CustomView {
         TreeListModifier.collapseAt(treeList, [])//closes the treeList
         TreeListModifier.explodeAt(treeList,[])//opens the treeList
         
-        TreeListModifier.removeAt(treeList, [1])
+
         treeList.node.removeAt([1])
         treeList.node.addAt([1],  NSXMLElement("<item title=\"Fish\"/>"))/*new*/
         
-
+        
         
         
         
