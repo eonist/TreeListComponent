@@ -21,9 +21,10 @@ class MainView:CustomView {
         treeList
         
         Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")
+        Swift.print("selected Title: " + "\(XMLParser.attributesAt(treeList.node.xml, TreeListParser.selectedIndex(treeList))!["title"])")
         /*
         Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
-        Swift.print("selected Title: " + "\(XMLParser.attributesAt(treeList.node.xml, TreeListParser.selectedIndex(treeList))!["title"])")
+        
         TreeListModifier.collapseAt(treeList, [])
         TreeListModifier.setSelectedAt(treeList, [1])
         TreeListModifier.unSelectAll(treeList)
