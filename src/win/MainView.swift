@@ -15,14 +15,12 @@ class MainView:CustomView {
      */
     func createTreeList(){
         StyleManager.addStylesByURL("~/Desktop/css/treelistdemo.css")
-        //create the tree list here
         
         let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
         let treeList:TreeList = container!.addSubView(TreeList(140, 288, 24, Node(xml),container))
         treeList
         
-        Swift.print("Selected: " + "\(TreeListParser.selected(treeList))")
-        //Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")
+        Swift.print("selectedIndex: " + "\(TreeListParser.selectedIndex(treeList))")
         /*
         Swift.print("selected: " + "\(TreeListParser.selected(treeList))")
         Swift.print("selected Title: " + "\(XMLParser.attributesAt(treeList.node.xml, TreeListParser.selectedIndex(treeList))!["title"])")
