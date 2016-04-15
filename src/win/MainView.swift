@@ -13,7 +13,6 @@ class MainView:CustomView {
     /**
      *
      */
-    
     var treeList:TreeList!
     
     func createTreeList(){
