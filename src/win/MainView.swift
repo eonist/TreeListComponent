@@ -18,7 +18,8 @@ class MainView:CustomView {
     
     func createTreeList(){
         
-        let url:String = "~/Desktop/css/treelistdemo.css"
+        StyleManager.addStylesByURL("~/Desktop/css/treelistdemo.css")
+        let url:String = "~/Desktop/ElCapitan/advance/treelist/treelist.css"
         StyleManager.addStylesByURL(url,true)
         
         fileWatcher = FileWatcher([url.tildePath])
