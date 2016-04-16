@@ -2,6 +2,7 @@ import Foundation
 
 class MainView:CustomView {
     var container:Section?
+    var fileWatcher:FileWatcher?
     override func resolveSkin() {
         super.resolveSkin()
         StyleManager.addStyle("Section#sectionContainer{fill:orange;float:left;clear:left;}")
@@ -16,7 +17,20 @@ class MainView:CustomView {
     var treeList:TreeList!
     
     func createTreeList(){
-        StyleManager.addStylesByURL("~/Desktop/css/treelistdemo.css")
+        let url:String = "~/Desktop/css/treelistdemo.css"
+        StyleManager.addStylesByURL(url,true)
+        
+        fileWatcher = FileWatcher([url.tildePath])
+        fileWatcher!.event = { event in
+            //Swift.print(self)
+            Swift.print(event.description)
+            if(event.fileChange && event.path == url.tildePath) {
+                StyleManager.addStylesByURL(url,true)
+                ElementModifier.refreshSkin(self)
+                ElementModifier.floatChildren(self)
+            }
+        }
+        fileWatcher!.start()
         
         let xml:NSXMLElement = FileParser.xml("~/Desktop/assets/xml/treelist.xml")
         treeList = container!.addSubView(TreeList(140, 288, 24, Node(xml), container))
