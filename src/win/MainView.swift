@@ -50,7 +50,6 @@ class MainView:CustomView {
 
         treeList.node.removeAt([1])
         treeList.node.addAt([1],  NSXMLElement("<item title=\"Fish\"/>"))/*new*/
-        /**/
         
         //Swift.print("\(treeList.node.xml)")
         
@@ -71,7 +70,7 @@ class MainView:CustomView {
         treeList.event = onTreeListEvent//add local event listener
         
 
-        //TODO: try the move up and move down calls
+        //TODO: try the move up and move down methods
     }
     override func createTitleBar() {
         StyleManager.addStylesByURL("~/Desktop/css/titleBar.css")
