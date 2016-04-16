@@ -52,7 +52,7 @@ class MainView:CustomView {
                 Swift.print(selectedXML)//EXAMPLE output: <item title="Ginger"></item>
             }
         }
-        treeList.event = onTreeListEvent//add loval event listener
+        treeList.event = onTreeListEvent//add local event listener
         
 
         //TODO: try the move up and move down calls
